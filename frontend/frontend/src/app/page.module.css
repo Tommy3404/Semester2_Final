@@ -1,0 +1,15 @@
+.header{
+  display: flex;
+  justify-content: center;
+  background-color: green; /* makes the header background green */
+  margin: -10;
+  color: white;
+}
+
+.add{
+  display: flex;
+  justify-content: right; /* puts the link on the right side of the screen */
+  color: black;
+  padding-top: 20px;
+  font-size: x-large;
+}
