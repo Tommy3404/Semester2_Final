@@ -175,6 +175,26 @@ async function getEvent(){
             <button>Submit</button>
         </div>
       </section>
+      <div className={styles.admin}>
+      <h2>Add Admin</h2>
+      </div>
+      <section className={styles.addAdmin}>
+      <div className={styles.adminname}>
+            <h2>Admin Name:</h2>
+            <input type="text" placeholder="Name" />
+        </div>
+        <div className={styles.wallet}>
+            <h2>Wallet:</h2>
+            <input type="text" placeholder="Wallet" />
+        </div>
+        <div className={styles.physical}>
+            <h2>Address:</h2>
+            <input type="text" placeholder="Physical Address" />
+        </div>
+        <div className={styles.submit}>
+            <button>Submit</button>
+        </div>
+      </section>
     </div>
   );
 }
