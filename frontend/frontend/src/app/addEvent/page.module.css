@@ -1,0 +1,121 @@
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: green; /* makes the header background green */
+    margin: -10;
+    color: white;
+  }
+  
+  .back{
+    display: flex;
+    justify-content: right;
+    color: black;
+    padding-top: 20px;
+    font-size: x-large;
+  }
+
+  .addEvent {
+    padding: 20px;
+    background-color: #f8f9fa; 
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Maximum width to prevent it from stretching too much */
+    margin: 20px auto; /* Center the form */
+  }
+  
+  .addEvent div {
+    margin-bottom: 15px; 
+  }
+  
+  .addEvent h2 {
+    font-size: 1.2rem;
+    color: #333; 
+    margin-bottom: 5px; 
+  }
+  
+  .addEvent input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; 
+  }
+  
+  .addEvent input::placeholder {
+    color: #aaa; /* makes a lighter color for placeholder text */
+  }
+  
+  .addEvent button {
+    padding: 12px 20px;
+    background-color: #007bff; /* makes the button blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addEvent button:hover {
+    background-color: #0056b3; /* This causes a darker blue when hovered over */
+  }
+
+  .addAdmin {
+    padding: 20px;
+    background-color: #f8f9fa; 
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Maximum width to prevent it from stretching too much */
+    margin: 20px auto; /* Center the form */
+  }
+  
+  .addAdmin div {
+    margin-bottom: 15px; 
+  }
+  
+  .addAdmin h2 {
+    font-size: 1.2rem;
+    color: #333; 
+    margin-bottom: 5px; 
+  }
+  
+  .addAdmin input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; 
+  }
+  
+  .addAdmin input::placeholder {
+    color: #aaa; /* makes a lighter color for placeholder text */
+  }
+  
+  .addAdmin button {
+    padding: 12px 20px;
+    background-color: #007bff; /* makes the button blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addAdmin button:hover {
+    background-color: #0056b3; /* This causes a darker blue when hovered over */
+  }
+
+  .admin{
+    display: flex;
+    justify-content: center;
+    background-color: green; /* makes the header background green */
+    margin: -10;
+    color: white;
+  }
