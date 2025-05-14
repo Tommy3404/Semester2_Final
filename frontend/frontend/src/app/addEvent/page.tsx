@@ -143,6 +143,9 @@ async function getEvent(){
       <div className={styles.header}>
       <h1>Add Event</h1>
       </div>
+      <div>
+        <button onClick={connectToWallet}>Connect To Wallet</button>
+      </div>
       <div className={styles.back}>
         <Link href="../">🔙</Link>
       </div>
