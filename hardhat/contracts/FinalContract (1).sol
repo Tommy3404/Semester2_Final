@@ -40,5 +40,17 @@ contract FinalsContract {
     require(canAdd == true, "You are not an admin");
     admins.push(Admin(_name, _walletAddress, _physicalAddress));
 }
+
+function verifyAdmin(string memory _name, string memory _physicalAddress) public view returns (bool)  {
+    bool isAdmin = false;
+
+    for (uint i = 0; i<admins.length; i++){
+        if (keccak256(abi.encode(admins[i]))== keccak256(abi.encode(_name)) && keccak256(abi.encode(admins[i])) == keccak256(abi.encode(_physicalAddress))) {
+            isAdmin = true;
+        }
+    }
+    return isAdmin;
+    
+}
    
 }
