@@ -154,9 +154,14 @@ if(contract === undefined){
 if(contract){
   // setAdmin(await contractAddress.addAdmin());
   // setAddress(await contractAddress.addAddress());
-  contract.addAdmin("name", "0xBcd4042DE499D14e55001CcbB24a551F3b954096", "physicalAddress") //these are only place holders
+  contract.addAdmin(admin, wallet, physicalAddress)
 }
 
+}
+
+async function addEvent() {
+  console.log("adding event");
+  
 }
 
 async function getEvent(){
@@ -237,7 +242,7 @@ async function getEvent(){
             />
         </div>
         <div className={styles.submit}>
-            <button>Submit</button>
+            <button onClick={addEvent}>Submit</button>
         </div>
       </section>
       <div className={styles.admin}>
@@ -246,15 +251,30 @@ async function getEvent(){
       <section className={styles.addAdmin}>
       <div className={styles.adminname}>
             <h2>Admin Name:</h2>
-            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Name" 
+            value = {admin}
+            onChange={(e)=>{
+                setAdmin(e.target.value)
+            }}
+            />
         </div>
         <div className={styles.wallet}>
             <h2>Wallet:</h2>
-            <input type="text" placeholder="Wallet" />
+            <input type="text" placeholder="Wallet" 
+            value = {wallet}
+            onChange={(e)=>{
+                setWallet(e.target.value)
+            }}
+            />
         </div>
         <div className={styles.physical}>
             <h2>Address:</h2>
-            <input type="text" placeholder="Physical Address" />
+            <input type="text" placeholder="Physical Address" 
+            value = {physicalAddress}
+            onChange={(e)=>{
+                setPhysicalAddress(e.target.value)
+            }}
+            />
         </div>
         <div className={styles.submit}>
             <button onClick={addAdmin}>Submit</button>
