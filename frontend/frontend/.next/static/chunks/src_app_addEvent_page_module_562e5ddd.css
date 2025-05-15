@@ -1,0 +1,125 @@
+/* [project]/src/app/addEvent/page.module.css [app-client] (css) */
+.page-module__MRIQQG__header {
+  color: #fff;
+  background-color: green;
+  justify-content: center;
+  margin: -10px;
+  display: flex;
+}
+
+.page-module__MRIQQG__back {
+  color: #000;
+  justify-content: right;
+  padding-top: 20px;
+  font-size: x-large;
+  display: flex;
+}
+
+.page-module__MRIQQG__addEvent {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+.page-module__MRIQQG__addEvent div {
+  margin-bottom: 15px;
+}
+
+.page-module__MRIQQG__addEvent h2 {
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.page-module__MRIQQG__addEvent input {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.page-module__MRIQQG__addEvent input::placeholder {
+  color: #aaa;
+}
+
+.page-module__MRIQQG__addEvent button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  transition: background-color .3s;
+}
+
+.page-module__MRIQQG__addEvent button:hover {
+  background-color: #0056b3;
+}
+
+.page-module__MRIQQG__addAdmin {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+.page-module__MRIQQG__addAdmin div {
+  margin-bottom: 15px;
+}
+
+.page-module__MRIQQG__addAdmin h2 {
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.page-module__MRIQQG__addAdmin input {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.page-module__MRIQQG__addAdmin input::placeholder {
+  color: #aaa;
+}
+
+.page-module__MRIQQG__addAdmin button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  transition: background-color .3s;
+}
+
+.page-module__MRIQQG__addAdmin button:hover {
+  background-color: #0056b3;
+}
+
+.page-module__MRIQQG__admin {
+  color: #fff;
+  background-color: green;
+  justify-content: center;
+  margin: -10px;
+  display: flex;
+}
+
+
+/*# sourceMappingURL=src_app_addEvent_page_module_562e5ddd.css.map*/

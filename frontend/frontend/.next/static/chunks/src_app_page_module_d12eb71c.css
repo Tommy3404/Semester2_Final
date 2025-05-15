@@ -1,0 +1,25 @@
+/* [project]/src/app/page.module.css [app-client] (css) */
+.page-module___8aEwW__header {
+  color: #fff;
+  background-color: green;
+  justify-content: center;
+  margin: -10px;
+  display: flex;
+}
+
+.page-module___8aEwW__add {
+  color: #000;
+  justify-content: right;
+  padding-top: 20px;
+  font-size: x-large;
+  display: flex;
+}
+
+.page-module___8aEwW__event {
+  background-color: green;
+  border-radius: 5px;
+  width: 50vw;
+}
+
+
+/*# sourceMappingURL=src_app_page_module_d12eb71c.css.map*/
