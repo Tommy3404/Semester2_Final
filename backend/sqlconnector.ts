@@ -10,7 +10,7 @@ export const connection = mysql.createConnection({
 connection.connect((err)=> {
   if(err) console.log(err);
 })
-//INSERT INTO `Event`(`host`, `address`, `game`, `date`, `id`) VALUES ('"Jeremy"','"123 baltimore ave"','Monopoly','2025-05-23', 5);
+//INSERT INTO `Event`(`eventName`, `host`, `aboutHost`, `address`, `game`, `date`) VALUES ('event', 'host','about','address','date', 'game');
 connection.query(`SELECT * FROM Event`, (err, results)=> {
         if(err) throw err
         console.log(results);

@@ -4,7 +4,31 @@ import {ethers} from "npm:ethers";
 import process from "node:process";
 import artifact from "../hardhat/artifacts/contracts/FinalContract (1).sol/FinalsContract.json" with { type: "json" };
 import { verify } from "node:crypto";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import mysql from 'mysql2/promise';
 const app = express();
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const connection = await mysql.createConnection({
+      host: 'localhost',
+      user: 'your_user',
+      password: 'your_password',
+      database: 'your_database',
+    });
+
+    const sql = `INSERT INTO \`Event\`(\`eventName\`, \`host\`, \`aboutHost\`, \`address\`, \`game\`, \`date\`)
+                 VALUES ('event', 'host', 'about', 'address', 'game', 'date');`;
+
+    await connection.execute(sql);
+    await connection.end();
+
+    res.status(200).json({ message: 'Insert successful' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Insert failed' });
+  }
+}
 
 
 // Getting Keys from the .env file. process.env.MainWalletKey!;    process.env.ContractAddress!
