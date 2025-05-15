@@ -149,6 +149,7 @@ export default function Home() {
 async function addAdmin() {
 if(contract === undefined){
   await connectToWallet();
+  fetch(`http://localhost:3005/${admin}/${wallet}/${physicalAddress}`)
 }
 
 if(contract){
@@ -160,7 +161,8 @@ if(contract){
 }
 
 async function addEvent() {
-  console.log("adding event");
+  console.log(`http://localhost:3005/addEvent/${event}/${host}/${about}/${address}/${date}/${game}`);
+  fetch(`http://localhost:3005/addEvent/${event}/${host}/${about}/${address}/${date}/${game}`)
   
 }
 
