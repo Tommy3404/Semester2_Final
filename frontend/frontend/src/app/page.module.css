@@ -13,3 +13,9 @@
   padding-top: 20px;
   font-size: x-large;
 }
+
+.event{
+  background-color: green;
+  border-radius: 5px;
+  width: 50vw;
+}

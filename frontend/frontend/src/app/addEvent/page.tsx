@@ -79,6 +79,30 @@ const abi = [
 		],
 		"stateMutability": "view",
 		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_physicalAddress",
+				"type": "string"
+			}
+		],
+		"name": "verifyAdmin",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
 	}
 ]
 
@@ -86,6 +110,14 @@ export default function Home() {
 
   const [contract, setContract] = useState<ethers.Contract>()
   const [event, setEvent] = useState("")
+  const [host, setHost] = useState("")
+  const [about, setAbout] = useState("")
+  const [address, setAddress] = useState("")
+  const [date, setDate] = useState("")
+  const [game, setGame] = useState("")
+  const [admin, setAdmin] = useState("")
+  const [wallet, setWallet] = useState("")
+  const [physicalAddress, setPhysicalAddress] = useState("")
 
   async function connectToWallet() {
     if(contract !== undefined){
@@ -116,14 +148,21 @@ export default function Home() {
 async function addAdmin() {
 if(contract === undefined){
   await connectToWallet();
+  fetch(`http://localhost:3005/${admin}/${wallet}/${physicalAddress}`)
 }
 
 if(contract){
   // setAdmin(await contractAddress.addAdmin());
   // setAddress(await contractAddress.addAddress());
-  contract.addAdmin("name", "walletAddress", "physicalAddress") //these are only place holders
+  contract.addAdmin(admin, wallet, physicalAddress)
 }
 
+}
+
+async function addEvent() {
+  console.log(`http://localhost:3005/addEvent/${event}/${host}/${about}/${address}/${date}/${game}`);
+  fetch(`http://localhost:3005/addEvent/${event}/${host}/${about}/${address}/${date}/${game}`)
+  
 }
 
 async function getEvent(){
@@ -140,7 +179,7 @@ async function getEvent(){
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-      <h1>Add Event/Add Admin</h1>
+      <h1>Add Event</h1>
       </div>
       <div>
         <button onClick={connectToWallet}>Connect To Wallet</button>
@@ -151,30 +190,60 @@ async function getEvent(){
       <section className={styles.addEvent}>
         <div className={styles.name}>
             <h2>Event Name:</h2>
-            <input type="text" placeholder="Event Name" />
+            <input type="text" placeholder="Event Name" 
+            value = {event}
+            onChange={(e)=>{
+                setEvent(e.target.value)
+            }}
+            />
         </div>
         <div className={styles.host}>
             <h2>Host:</h2>
-            <input type="text" placeholder="Host Name" />
+            <input type="text" placeholder="Host Name" 
+            value = {host}
+            onChange={(e)=>{
+                setHost(e.target.value)
+            }}
+            />
         </div>
         <div className={styles.about}>
             <h2>About Host:</h2>
-            <input type="text" placeholder="About Host" />
+            <input type="text" placeholder="About Host" 
+            value={about}
+            onChange={(e)=>{
+              setAbout(e.target.value)
+            }}
+            />
         </div>
         <div className={styles.address}>
             <h2>Address:</h2>
-            <input type="text" placeholder="Address" />
+            <input type="text" placeholder="Address" 
+            value = {address}
+            onChange={(e)=>{
+                setAddress(e.target.value)
+            }}
+            />
         </div>
         <div className={styles.date}>
             <h2>Date:</h2>
-            <input type="text" placeholder="Date" />
+            <input type="text" placeholder="Date" 
+            value = {date}
+            onChange={(e)=>{
+                setDate(e.target.value)
+            }}
+            />
         </div>
         <div className={styles.game}>
             <h2>Game:</h2>
-            <input type="text" placeholder="Game" />
+            <input type="text" placeholder="Game" 
+            value = {game}
+            onChange={(e)=>{
+                setGame(e.target.value)
+            }}
+            />
         </div>
         <div className={styles.submit}>
-            <button>Submit</button>
+            <button onClick={addEvent}>Submit</button>
         </div>
       </section>
       <div className={styles.admin}>
@@ -183,23 +252,35 @@ async function getEvent(){
       <section className={styles.addAdmin}>
       <div className={styles.adminname}>
             <h2>Admin Name:</h2>
-            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Name" 
+            value = {admin}
+            onChange={(e)=>{
+                setAdmin(e.target.value)
+            }}
+            />
         </div>
         <div className={styles.wallet}>
             <h2>Wallet:</h2>
-            <input type="text" placeholder="Wallet" />
+            <input type="text" placeholder="Wallet" 
+            value = {wallet}
+            onChange={(e)=>{
+                setWallet(e.target.value)
+            }}
+            />
         </div>
         <div className={styles.physical}>
             <h2>Address:</h2>
-            <input type="text" placeholder="Physical Address" />
+            <input type="text" placeholder="Physical Address" 
+            value = {physicalAddress}
+            onChange={(e)=>{
+                setPhysicalAddress(e.target.value)
+            }}
+            />
         </div>
         <div className={styles.submit}>
-            <button>Submit</button>
+            <button onClick={addAdmin}>Submit</button>
         </div>
       </section>
     </div>
   );
 }
-
-
-
